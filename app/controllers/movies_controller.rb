@@ -32,7 +32,8 @@ class MoviesController < ApplicationController
 
 #UPDATE
   def edit_form
-    @movie = Movie.find(params[:id])
+    @movie = Movie.find(params["id"])
+    render("movies/edit_form.html.erb")
   end
 
   def update_row
